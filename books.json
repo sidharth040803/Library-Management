@@ -1,0 +1,37 @@
+
+     [
+      {
+        "bookId": "1",
+        "Name": "The Great Gatsby",
+        "publicationDate": "April 10, 1925",
+        "authors": [
+          "F. Scott Fitzgerald"
+        ]
+      },
+      {
+        "bookId":"2" ,
+        "Name": "To Kill a Mockingbird",
+        "publicationDate": "July 11, 1960",
+        "authors": [
+          "Harper Lee"
+        ]
+      },
+      {
+        "bookId": "3",
+        "Name": "1984",
+        "publicationDate": "June 8, 1949",
+        "authors": [
+          "George Orwell"
+        ]
+      },
+      {
+        "bookId": "4",
+        "Name": "Pride and Prejudice",
+        "publicationDate": "January 28, 1813",
+        "authors": [
+          "Jane Austen"
+        ]
+      }
+    ]
+  
+  

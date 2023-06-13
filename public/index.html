@@ -1,0 +1,267 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+     <title>Library</title> 
+     <style> 
+         body { 
+             font-family: Georgia, 'Times New Roman', Times, serif; 
+             background: linear-gradient(50deg,#2980b9,#8e44ad); 
+             display: flex; 
+             justify-content: center; 
+             margin: 0; 
+             padding: 0; 
+         } 
+  
+         .center-screen { 
+             display: flex; 
+             flex-direction: column; 
+             justify-content: space-between; 
+             align-items: center; 
+             min-height: 85vh; 
+         } 
+  
+         h1 { 
+             font-size: 40px; 
+             background-color: #d8d7d7;
+             padding:15px;
+             margin-bottom: 20px; 
+             text-align: center; 
+             text-transform: uppercase; 
+             letter-spacing: 3px; 
+         } 
+  
+         .form-container { 
+             display: flex; 
+             justify-content: space-between; 
+             margin-top: 20px; 
+             
+             
+  
+         } 
+  
+         form { 
+  
+             background-color: white;  
+             width: 48%; 
+             padding: 20px; 
+             margin: 10px; 
+             border-radius: 20px;
+             border: 1px solid rgb(117, 116, 116);
+             
+            
+  
+         } 
+  
+         table { 
+  
+             width: 100%; 
+             padding: 10px; 
+             display: flex; 
+             border-spacing: 10px; 
+             margin-bottom: 20px; 
+             margin-right: 45px; 
+             text-align: center;
+         } 
+  
+         th, td { 
+             padding: 5px; 
+             text-align: left; 
+             border-bottom: 1px solid white; 
+             border-radius: 20px;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             font-weight: 600;
+         } 
+  
+         th { 
+             font-weight: bold; 
+             color: black; 
+             text-transform: uppercase;
+             font-family: Verdana, Geneva, Tahoma, sans-serif; 
+         } 
+
+         .button-group{
+            width:100%;
+            height:50px;
+            border:1px solid;
+            background: #2691d9;
+            border-radius: 25px;
+            font-size: 18px;
+            color:#e9f4fb;
+            font-weight: 700;
+            cursor:pointer;
+            box-shadow: 0 0 5px cyan, 
+            0 0 25px cyan;
+         }
+        .button-group:hover{
+            box-shadow:0 0 5px cyan, 
+            0 0 25px cyan,0 0 50px cyan,
+            0 0 100px cyan,0 0 200px cyan;
+           
+            transition: 0.4s;
+        }
+       
+  
+         input[type="text"], input[type="date"], select { 
+             width: 100%; 
+             padding: 8px; 
+             border: 1px solid #ccc; 
+             border-radius: 1px; 
+         } 
+       
+  
+  
+         .error-message { 
+             color: red; 
+             font-size: 17px; 
+             margin-top: 5px; 
+             text-align: center; 
+         } 
+     </style> 
+ </head> 
+ <body> 
+     <div class="center-screen"> 
+         <h1>Library Management System</h1> 
+         <div class="form-container"> 
+             <form name="lms" action="http://localhost:3000/search" method="GET"> 
+                 <table> 
+                     <tr> 
+                         <th><label for="search_type">Search for:</label></th> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <select id="search_type" name="search_type"> 
+                                 <option value="book">Book</option> 
+                                 <option value="journal">Journal</option> 
+                             </select> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                           <label for="book_name">Name:</label> 
+                           <input type="text" id="book_name" name="book_name"> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td>
+                             <label for="date">Issue Date</label>
+                             <input type="date" id="publication_date" name="publication_date" placeholder="publicationDate"> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <input type="submit" value="Search" class="button-group"> 
+                         </td> 
+                     </tr> 
+                 </table> 
+                 <div id="search-Error" class="error-message"></div> 
+             </form> 
+             <form name="updateForm" action="http://localhost:3000/update" method="post"> 
+                 <table> 
+                     <tr> 
+                         <th><label for="update_type">Update:</label></th> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <select id="update_type" name="update_type"> 
+                                 <option value="book">Book</option> 
+                                 <option value="journal">Journal</option> 
+                             </select> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <label for="update_id">BOOK-ID</label> 
+                             <input type="text" id="update_id" name="update_id"> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <label for="new_name">Updated Book:</label> 
+                             <input type="text" id="new_name" name="new_name" > 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <input type="submit" value="Update" class="button-group"> 
+                         </td> 
+                     </tr> 
+                 </table> 
+                 <div id="update-Error" class="error-message"></div> 
+             </form> 
+             <form action="http://localhost:3000/report" method="get"> 
+                 <table> 
+                     <tr> 
+                         <th><label for="report">Report:</label></th> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <select id="report_type" name="report_type"> 
+                                 <option value="book">Book</option> 
+                                 <option value="journal">Journal</option> 
+                             </select> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <label for="report_id">Select a date range:</label><br><br> 
+                             <label>from:</label>   
+                             <input type="date" id="start_date" name="start_date"> 
+                             <br><br> 
+                             <label>to:</label> 
+                             <input type="date" id="end_date" name="end_date"> 
+                         </td> 
+                     </tr> 
+                     <tr> 
+                         <td> 
+                             <input type="submit" value="Generate Report" class="button-group"> 
+                         </td> 
+                     </tr> 
+                 </table> 
+                 <div id="report-Error" class="error-message"></div> 
+             </form> 
+         </div> 
+     </div> 
+  
+     <script> 
+         const searchForm = document.forms['lms']; 
+         const updateForm = document.forms['updateForm']; 
+         const reportForm = document.forms[2]; 
+  
+         searchForm.addEventListener('submit', function(event) { 
+             event.preventDefault(); 
+             const bookName = document.getElementById('book_name').value.trim(); 
+             const publicationDate = document.getElementById('publication_date').value.trim(); 
+  
+             if (bookName === '' && publicationDate === '') { 
+                 document.getElementById('search-Error').textContent = 'Please enter either a book name or publication date.'; 
+             } else { 
+                 searchForm.submit(); 
+             } 
+         }); 
+  
+         updateForm.addEventListener('submit', function(event) { 
+             event.preventDefault(); 
+             const updateId = document.getElementById('update_id').value.trim(); 
+             const newName = document.getElementById('new_name').value.trim(); 
+  
+             if (updateId === '' || newName === '') { 
+                 document.getElementById('update-Error').textContent = 'Please fill in all the fields.'; 
+             } else { 
+                 updateForm.submit(); 
+             } 
+         }); 
+  
+         reportForm.addEventListener('submit', function(event) { 
+             event.preventDefault(); 
+             const startDate = document.getElementById('start_date').value.trim(); 
+             const endDate = document.getElementById('end_date').value.trim(); 
+  
+             if (startDate === '' || endDate === '') { 
+                 document.getElementById('report-Error').textContent = 'Please select a valid date range.'; 
+             } else { 
+                 reportForm.submit(); 
+             } 
+         }); 
+     </script> 
+ </body> 
+ </html

@@ -1,0 +1,65 @@
+
+     [
+      {
+        "JournalId": "1",
+        "Name": "Journal of Science",
+        "PublicationDate": "April 10, 1990",
+        "Authors": ["John Doe", "Jane Smith"]
+      },
+      {
+        "JournalId": "2",
+        "Name": "International Journal of Medicine",
+        "PublicationDate": "August 4, 2003",
+        "Authors": ["Michael Johnson", "Emily Anderson", "David Lee"]
+      },
+      {
+        "JournalId": "3",
+        "Name": "Journal of Computer Science",
+        "PublicationDate": "April 24, 2019",
+        "Authors": ["Sarah Wilson", "Robert Thompson"]
+      },
+      {
+        "JournalId": "4",
+        "Name": "Journal of Engineering",
+        "PublicationDate": "February 16, 1945",
+        "Authors": ["Matthew Brown", "Olivia Davis", "Sophia Garcia"]
+      },
+      {
+        "JournalId": "5",
+        "Name": "Journal of Economics",
+        "PublicationDate": "February 5, 2000",
+        "Authors": ["Daniel Johnson", "Emma Martinez"]
+      },
+      {
+        "JournalId": "6",
+        "Name": "Journal of Psychology",
+        "PublicationDate": "July 17, 2017",
+        "Authors": ["Laura Adams", "Christopher Wilson"]
+      },
+      {
+        "JournalId": "7",
+        "Name": "Journal of Literature",
+        "PublicationDate": "August 28, 2018",
+        "Authors": ["Sophie Collins", "William Turner", "Oliver Bennett"]
+      },
+      {
+        "JournalId": "8",
+        "Name": "Journal of Environmental Studies",
+        "PublicationDate": "November 24, 1990",
+        "Authors": ["Grace Roberts", "Lucas Murphy"]
+      },
+      {
+        "JournalId": "9",
+        "Name": "Journal of History",
+        "PublicationDate": "January 28, 1813",
+        "Authors": ["Alexandra Thompson", "James Parker", "Ella Jenkins"]
+      },
+      {
+        "JournalId": "10",
+        "Name": "Journal of Sociology",
+        "PublicationDate": "January 6, 2020",
+        "Authors": ["Nathan Evans", "Lily Harris"]
+      }
+    ]
+  
+  

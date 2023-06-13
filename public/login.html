@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="header">USER LOGIN</h1>
+    <form>
+        <div class="form-group">
+            
+            <input type="text" placeholder="Enter Username" class="input" id="username">
+        </div>
+        <div class="form-group">
+            
+            <input type="text" placeholder="Enter Password" class="input" id="password" >
+        </div>
+        <input type="button" value="login" class="btn" onclick="login()">
+    </form>
+</div>
+   
+</body>
+<style>
+    body{
+        font-family: Georgia, 'Times New Roman', Times, serif; 
+         background: linear-gradient(50deg,#2980b9,#8e44ad); 
+         display: flex; 
+         justify-content: center; 
+         margin: 0; 
+         padding: 0; 
+    }
+    .container{
+        width:330px;
+        padding: 2rem 1rem;
+        margin: 50px auto;
+        background-color: antiquewhite;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 20px 35x rgba(0, 0, 0, 0.1);
+    }
+    h1{
+        font-size: 2rem;
+        color: black;
+        margin-bottom: 1.2rem;
+    }
+    .input{
+        width:92%;
+        outline: none;
+        border: 1px solid #fff;
+        padding:12px 20px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #e4e4e4;
+            }
+    .btn{
+        font-size: 1rem;
+        margin-top: 1.8rem;
+        padding:10px 0;
+        border-radius: 20px;
+        width: 90%;
+        color: #fff;
+        cursor:pointer;
+        background: rgb(17,107,143);
+    }
+</style>
+
+<script>
+    function login(){
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        if(username=="librarian" && password=="12345"){
+            window.location.assign("index.html");
+            alert("logged in successfully");
+        }else{
+            alert("invalid");
+        }
+    }
+</script>
+
+
+</html>
